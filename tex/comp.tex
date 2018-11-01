@@ -1,5 +1,5 @@
 \documentclass{jarticle}
-
+\usepackage{listings}
 \begin{document}
 
 \title{引き継ぎ資料のようななにか}
@@ -16,16 +16,50 @@
 もしなにかあれば代表者のtwitterアカウント@bot973888までお願いします。
 \clearpage
 \section{制御}
+   プログラミング言語はC,C++を扱います。
    \subsection{HelloWorld}
+   \begin{lstlisting}
+      int main(){
+         return 0;
+      }
+   \end{lstlisting}
+   以上のコードは何も行わないコードです。
+   プログラムはint main()の後ろに在る中括弧の中身を実行します。
+   これはどんなプログラムに対してもそうなので
+   他人のプログラムを見るときは
+   まず最初に、このint main()の中身を見ます。
+   それと、いつまでもint main()と呼ぶのは不便ですから
+   今からこれをmain関数と呼ぶことにします。
+   
+     
+   ・プログラムはmain関数の中括弧の中を実行する。
+  
+  
+   次に気になるのは return 0; です。
+   return 0; は main関数の終了を表していると考えてください。
+   また後ろに付いているセミコロンは毎回命令の後ろにつけなければいけません。
+   今回は return 0 という命令の後ろにくっついていることになります。
+
+
+   ・return 0; は main関数の終了を表す。
+
+
    \subsection{Lチカ}
    \subsection{入力}
    \subsection{モーター}
    \subsection{センサー}
    \subsection{割り込み}
    \subsection{エンコーダ}
+   \subsection{フィードフォワード制御}
+   \subsection{フィードバック制御}
+      \subsubsection{P}
+      \subsubsection{PI}
+      \subsubsection{PD}
+      \subsubsection{PID}
    \subsection{Linux}
    \subsection{ROS}
       1.ROSwikiを見ます
+
       2.終わり
 \clearpage
 \section{回路}
@@ -36,7 +70,21 @@
       \subsubsection{フルN型}
 \clearpage
 \section{競プロ}
+   \subsection{オーダー表記}
+      プログラムの早さをアバウトに表す方法です。
+      \\次のコードを例にとってオーダー表記をしてみましょう。
+      \begin{lstlisting}[basicstyle=\ttfamily,frame=single]
+         int main(){
+            int N;
+            scanf("%d",&N);
+            for(int i=0;i<N;i++){
+               printf("HelloWorld");
+            }
+            return 0;
+         }
+      \end{lstlisting}
    \subsection{アルゴリズム}
+      \subsubsection{全探索}
       \subsubsection{二分探索}
       \subsubsection{三分探索}
    \subsection{データ構造}
