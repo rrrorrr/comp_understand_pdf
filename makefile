@@ -9,6 +9,11 @@ run: comp.pdf
 
 clean:
 	rm -f *.log
+	rm -f *.dvi
 	rm -f *.pdf
+	rm -f *.aux
+
+pdf:
+	rm -f *.log
 	rm -f *.dvi
 	rm -f *.aux
